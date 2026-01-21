@@ -1,0 +1,4 @@
+https://leetcode.com/problems/median-of-two-sorted-arrays/submissions/1884548041
+
+//Approach
+first we merge both arrays and sort it after we directly calculate median using math formula.
