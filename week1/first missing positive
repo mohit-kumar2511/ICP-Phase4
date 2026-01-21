@@ -1,0 +1,6 @@
+https://leetcode.com/problems/first-missing-positive/submissions/1884701822
+
+//Approach 
+for this first I create an hashset and run a loop and traverse full array and add elements which are greater than 0 inside the set
+then run another for loop and use .contains function to check wheather the perticular number in present or not in the array 
+we use hashSet because we know that TC of searching any element in the set is O(1) .
