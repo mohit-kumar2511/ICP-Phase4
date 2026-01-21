@@ -1,0 +1,6 @@
+https://leetcode.com/problems/count-primes/submissions/1883671229
+
+//Approach
+in this we are given an integer n and we need to return an count of prime number from 0 to n for this we create an boolean array which at start all are true.
+  we run a for loop from 2 to sqrt of n and take one by one number and fill its all multiple upto n is false
+at last calculate how many number left to true that is equal to number of prime count upto n. 
