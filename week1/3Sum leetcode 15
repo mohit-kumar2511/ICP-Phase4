@@ -1,0 +1,5 @@
+https://leetcode.com/problems/3sum/submissions/1891773975
+
+//Approach
+for this first we sort our array and then run a for loop from 0 to n and take 1 by 1  element apply binary search for remaining two elements and when we found two elements then 
+add all three elements in the list of list. 
