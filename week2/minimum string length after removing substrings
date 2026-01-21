@@ -1,0 +1,7 @@
+https://leetcode.com/problems/minimum-string-length-after-removing-substrings/submissions/1889536076
+
+//Approach
+for this question I use two approaches 1st is brute force and 2nd is optimal in brute force I check both cases like if out currect character is A then I check if it contains that
+substring if it contains then we again call the same function after removing that substring and when we reach end of the index then I directly return the length of string
+
+and in the optimal I use stack for check an element like if st.peek is A then direct pop A and go to next index using continue. 
