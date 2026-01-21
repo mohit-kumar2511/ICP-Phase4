@@ -1,0 +1,6 @@
+https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/submissions/1883631117
+
+
+//Approach
+for this question given that two strings and we need to find an first substring in string a which is equal to string b for this we run a loop 0 to string a.length-string b.length
+and check for every index if it contains substring b then return index 
