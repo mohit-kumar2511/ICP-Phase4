@@ -1,0 +1,6 @@
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/1883905266/?envType=problem-list-v2&envId=array
+
+
+// Approach
+for this this question we assume our first element as an minimum element then calculate profit on every index and if the current element is minimum on our minimum elenet then
+we update our minimum element to the current element. 
