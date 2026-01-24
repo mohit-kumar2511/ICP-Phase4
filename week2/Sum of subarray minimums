@@ -1,0 +1,16 @@
+https://leetcode.com/problems/sum-of-subarray-minimums/submissions/1891101667
+
+the question says that we find  all possible suubarray minimums sum for this if we use brute force that is create all possible 
+subarrays and calculate all minimums and sum it run in O(n)^2 because in this for calculating all posible subarrays we use nested loop
+and then for large testcases it gives tle so for decrease complexity.
+
+
+I use stack we find range of all elements in which our element is minimum we create two arrays to calculate range and calculate range 
+using stack like next smaller element then we multiply our current element and range and add it in our ans
+
+
+
+https://leetcode.com/problems/sum-of-subarray-minimums/submissions/1891332890
+and this soln I implement our own stack to reduce time complexity we know that when we use inbuilt it import its all functions
+and own stack I create an array of same size that our input array and assume it our owm stack and one variable idx which give him 
+our peek element.
