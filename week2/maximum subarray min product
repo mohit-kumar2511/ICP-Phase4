@@ -1,0 +1,7 @@
+https://leetcode.com/problems/maximum-subarray-min-product/submissions/1890726638
+
+// APPROACH --> A minproduct calculate as minimum value in a subarray *subarray sum it similar as previous so we use same approach that is calculate 
+a range in which our element is minimum and use prefix sum array to claculate a sum of every range and multiply both
+and to reduce our time complexity I implement our own stack 
+
+https://leetcode.com/problems/maximum-subarray-min-product/submissions/1891320787
