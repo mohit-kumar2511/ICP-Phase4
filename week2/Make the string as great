@@ -1,0 +1,8 @@
+https://leetcode.com/problems/make-the-string-great/submissions/1889550683
+
+//Approach 
+approach for this code is same as previous code I write two approaches for this code 1st is brute force using recursion when we 
+hit the condition that is two adjacent character in which one char is small and one char is capital like a and A adjacent to each
+then we pass new string at same function and if any string we can't get any character then we can direct return that string.
+//and the 2nd approach 
+Using stack we push our elements for every element we check our peek element if it hit the condition then we direct pop that element.
