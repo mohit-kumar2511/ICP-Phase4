@@ -1,0 +1,5 @@
+https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/submissions/1891822348
+
+is this question we need to calculate that when our array is empty and its all values is 0 then how many steps we need to increase so that we achieve
+our target array for this I take an ans variable and initialize it with 1st element and run a loop from 1 to n and when we get that 
+the current element is geeater than previous element then in ans element I add current element and previous element.
