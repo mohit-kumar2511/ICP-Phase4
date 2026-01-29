@@ -1,0 +1,24 @@
+https://leetcode.com/problems/reveal-cards-in-increasing-order/submissions/1899651057
+
+
+Approach-> In this Question one array is given and condition we need to arrange the array on that condition so that when we apply that conndition on that array then our array is 
+sorted for this we use queue so we take one deque and first sort our arrray then we apply reverse of the condition of that array. 
+SOLn->
+
+class Solution {
+    public int[] deckRevealedIncreasing(int[] deck) {
+        Arrays.sort(deck);
+        Deque<Integer> dec=new LinkedList<>();
+        for(int i=deck.length-1;i>=0;i--){
+            if(!dec.isEmpty()){
+                int p=dec.removeLast();
+                dec.addFirst(p);
+            }
+            dec.addFirst(deck[i]);
+        }
+        for(int i=0;i<deck.length;i++){
+            deck[i]=dec.removeFirst();
+        }
+        return deck;
+    }
+}
