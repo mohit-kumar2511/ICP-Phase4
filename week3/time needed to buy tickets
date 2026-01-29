@@ -1,0 +1,34 @@
+https://leetcode.com/problems/time-needed-to-buy-tickets/submissions/1898670552
+
+
+Approach->> Our target to calculate time  first we take a queue and add all the elements on that queue and we give an K and we need to make Kth index value equal to 0 
+in one sec we minimize only 1 unit and take time 1 sec and add the queue after remove 1 value
+
+
+Soln>
+class Solution {
+    public int timeRequiredToBuy(int[] tickets, int k) {
+        int time=0;
+        Queue<Integer>q= new LinkedList<>();
+        for(int i=0;i<tickets.length;i++){
+            q.add(i);
+        }
+
+        while(!q.isEmpty()){
+            time++;
+            int front = q.poll();
+
+            tickets[front]--;
+
+            if(tickets[front]!=0){
+                q.add(front);
+            }
+            else{
+                if(front==k){
+                    return time;
+                }
+            }
+        }
+        return time;     
+    }
+}
