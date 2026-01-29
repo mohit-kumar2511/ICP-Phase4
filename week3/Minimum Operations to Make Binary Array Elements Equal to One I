@@ -1,0 +1,26 @@
+https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i/submissions/1899609513
+
+
+Approach-> In this question we need to calculate count of operation so our binary array is set to 1 so the approach is we traverse to the length-2 index when we find that our
+element is 0 then we increase our count and  set it 1 and we also change next 2 elements if it is 0 then 1 our if it is 1 than 0 and at the out of loop we also run an for loop when the array contain any 
+0 that means we can't set our array to the 1 at end return the count
+
+SOLn ->
+class Solution {
+    public int minOperations(int[] nums) {
+        int cnt=0;
+        for(int i=0;i<nums.length-2;i++){
+            if(nums[i]==0){
+                nums[i]=1;
+                nums[i+1]=Math.abs(nums[i+1]-1);
+                nums[i+2]=Math.abs(nums[i+2]-1);
+                cnt++;
+            }
+        }
+        for(int i:nums) if(i==0) return -1;
+        return cnt;
+    }
+}
+
+
+
