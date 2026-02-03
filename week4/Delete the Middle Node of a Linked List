@@ -1,0 +1,21 @@
+https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/submissions/1904103473
+
+Approach-we follow slow and fast approach and also take a prv variable which is just previous to our current because when our fast is null then slow
+ is exact mid but we neeed to delete middle so then we connect our prv to slow.next 
+
+
+class Solution {
+    public ListNode deleteMiddle(ListNode head) {
+        if(head==null||head.next==null) return null;
+        ListNode slow=head;
+        ListNode fast=head;
+        ListNode prv=null;
+        while(fast!=null&&fast.next!=null){
+            fast=fast.next.next;
+            prv=slow;
+            slow=slow.next;
+        }
+        prv.next=slow.next;
+        return head; 
+    }
+}
