@@ -1,0 +1,34 @@
+https://leetcode.com/problems/next-greater-node-in-linked-list/submissions/1906573716
+
+Approach--> In this code we neeed to return the array which contains for every node at his left side greater that that node for this we run two loops and calculate the 
+next greater element and if we not find it simply increse our index
+
+
+
+class Solution {
+    public int[] nextLargerNodes(ListNode head) {
+        ListNode len=head;
+        int l=0;
+        while(len!=null){
+            len=len.next;
+            l++;
+        }
+        int[] arr=new int[l];
+        int idx=0;
+        ListNode temp=head;
+        while(temp!=null){
+            ListNode temp1=temp.next;
+            int k=temp.val;
+            while(temp1!=null){
+                if(temp1.val>k){
+                    arr[idx++]=temp1.val;
+                    break;
+                }
+                temp1=temp1.next;
+            }
+            if(temp1==null) idx++;
+            temp=temp.next;
+        }
+        return arr;
+     }
+}
