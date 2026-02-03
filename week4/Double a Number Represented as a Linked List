@@ -1,0 +1,40 @@
+https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/submissions/1906551146
+
+Approach-> in this question first I reverse our linked list and then double every node.val by maintaining carry and at last check if our carry is 0 or not and if it is not 0 then
+add new node to the end and return reverse of that linkedlist 
+
+
+
+class Solution {
+    public ListNode doubleIt(ListNode head) {
+        ListNode p=reverse(head);
+        int c=0;
+        ListNode temp=p;
+        while(temp!=null){
+            int k=temp.val;
+            k=k*2+c;
+            temp.val=k%10;
+            c=k/10;
+            if(temp.next==null) break;
+            temp=temp.next;
+
+        }
+        if(c>0){
+            temp.next=new ListNode(c);
+        }
+        return reverse(p);
+
+    }
+    public ListNode reverse(ListNode head){
+        ListNode prv=null;
+        ListNode curr=head;
+        ListNode next=null;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prv;
+            prv=curr;
+            curr=next;
+        }
+        return prv;
+    }
+}
