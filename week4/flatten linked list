@@ -1,0 +1,23 @@
+class Solution {
+    public Node flatten(Node root) {
+        ArrayList<Integer> list=new ArrayList<>();
+        Node temp=root;
+        while(temp!=null){
+            Node down=temp;
+            while(down!=null){
+                list.add(down.data);
+                down=down.bottom;
+            }
+            temp=temp.next;
+        }
+        Collections.sort(list);
+        Node dummy=new Node(0);
+        Node dummy2=dummy;
+        for(int i=0;i<list.size();i++){
+            Node p=new Node(list.get(i));
+            dummy2.bottom=p;
+            dummy2=dummy2.bottom;
+        }
+        return dummy.bottom;
+    }
+}
